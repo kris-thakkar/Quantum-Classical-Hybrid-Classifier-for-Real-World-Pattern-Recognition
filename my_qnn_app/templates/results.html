@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QNN Classification Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    pre {
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 5px;
+      white-space: pre-wrap; /* allow wrapping if needed */
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Classification Results</h1>
+    <p><strong>Test Accuracy:</strong> {{ accuracy | round(2) }}</p>
+    <p><strong>Classification Report:</strong></p>
+    <pre>{{ classification_report }}</pre>
+    <p><strong>Predicted Labels:</strong> {{ predictions }}</p>
+    <p><strong>Actual Labels:</strong> {{ actuals }}</p>
+    
+    <a href="/">Back to Home</a>
+  </div>
+</body>
+</html>
